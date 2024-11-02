@@ -49,8 +49,11 @@ public class SceneTransition : MonoBehaviour
         GlobalEvents.EventStartSceneLoading?.Invoke(sceneIndex);
 
         // Activate Loading Screen
-        loadingScreen.UpdateProgress(0f, true);
-        loadingScreen.Activate(true, timeForActivateLoadingScreen);
+        if (loadingScreen != null)
+        {
+            loadingScreen.UpdateProgress(0f, true);
+            loadingScreen.Activate(true, timeForActivateLoadingScreen);
+        }
 
         // Load empty Boot scene first for freeing RAM
         await SceneManager.LoadSceneAsync(SceneNames.Boot.ToString());
@@ -62,13 +65,20 @@ public class SceneTransition : MonoBehaviour
         // Update progress in Loading Screen
         while (!loadingSceneOperation.isDone)
         {
-            loadingScreen.UpdateProgress(loadingSceneOperation.progress);
+            if (loadingScreen != null)
+            {
+                loadingScreen.UpdateProgress(loadingSceneOperation.progress);
+            }
             await UniTask.NextFrame();
         }
 
         // Deactivate Loading Screen
-        loadingScreen.UpdateProgress(1f, true);
-        loadingScreen.Activate(false, timeForActivateLoadingScreen);
+        
+        if (loadingScreen != null)
+        {
+            loadingScreen.UpdateProgress(1f, true);
+            loadingScreen.Activate(false, timeForActivateLoadingScreen);
+        }
 
         GlobalEvents.EventEndSceneLoading?.Invoke(sceneIndex);
     }

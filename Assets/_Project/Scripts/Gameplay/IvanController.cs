@@ -37,5 +37,7 @@ public class IvanController : MonoBehaviour
         _animator.SetBool("Death", true);
         _movementSpeed = 0f;
         _movementDirection = Vector3.zero;
+        
+        GlobalEvents.EventIvanIsDead?.Invoke();
     }
 }
