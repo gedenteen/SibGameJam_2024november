@@ -11,13 +11,12 @@ public class LevelMenu : UiPanel
     private Button buttonPause;
     [SerializeField] 
     private Button buttonContinue;
-
     [SerializeField] 
     private Button buttonSettings;
-
+    [SerializeField] 
+    private Button buttonRestartLevel;
     [SerializeField] 
     private Button buttonToMainMenu;
-
     [SerializeField] 
     private Button buttonQuit;
 
@@ -27,6 +26,7 @@ public class LevelMenu : UiPanel
         buttonContinue.onClick.AddListener(() => Activate(false));
         buttonToMainMenu.onClick.AddListener(LoadMainMenu);
         buttonSettings.onClick.AddListener(ShowSettings);
+        buttonRestartLevel.onClick.AddListener(RestartScene);
 
 #if !UNITY_EDITOR && (UNITY_WEBGL || UNITY_IOS || UNITY_ANDROID)
         buttonQuit.gameObject.SetActive(false);
@@ -67,6 +67,12 @@ public class LevelMenu : UiPanel
         {
             Debug.Log($"MainMenu: ShowSettings: there is no Settings");
         }
+    }
+
+    private async void RestartScene()
+    {
+        await SceneTransition.instance.ReloadCurrentScene();
+        Time.timeScale = 1f;
     }
 
     private void Quit()

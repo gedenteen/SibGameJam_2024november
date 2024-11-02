@@ -33,6 +33,12 @@ public class SceneTransition : MonoBehaviour
         await SwitchToSceneAsync(sceneIndex);
     }
 
+    public async UniTask ReloadCurrentScene()
+    {
+        int sceneIndex = SceneManager.GetActiveScene().buildIndex;
+        await SwitchToSceneAsync(sceneIndex);
+    }
+
     public async void SwitchToMainMenu()
     {
         await SwitchToSceneAsync((int)SceneNames.MainMenu);
