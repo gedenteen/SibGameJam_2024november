@@ -7,6 +7,7 @@ public class GhostController : MonoBehaviour
 {
     [Header("Parameters")]
     [SerializeField] private float _movementSpeed;
+    [SerializeField] private bool _canMove = true;
 
     [Header("References")]
     [SerializeField] private SpriteRenderer _characterSprite;
@@ -15,10 +16,17 @@ public class GhostController : MonoBehaviour
     private void Awake()
     {
         TriggerForInteraction.EventGhostInZone.AddListener(OnTriggerForIntecation);
+        GlobalEvents.EventStartMinigameInput.AddListener(OnStartMinigameInput);
+        GlobalEvents.EventEndMinigameInput.AddListener(OnEndMinigameInput);
     }
 
     private void Update()
     {
+        if (!_canMove)
+        {
+            return;
+        }
+
         Vector3 input = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
         transform.position += input * _movementSpeed * Time.deltaTime;
 
@@ -31,6 +39,18 @@ public class GhostController : MonoBehaviour
     private void OnDestroy()
     {
         TriggerForInteraction.EventGhostInZone.RemoveListener(OnTriggerForIntecation);
+        GlobalEvents.EventStartMinigameInput.RemoveListener(OnStartMinigameInput);
+        GlobalEvents.EventEndMinigameInput.RemoveListener(OnEndMinigameInput);
+    }
+
+    private void OnStartMinigameInput(string keySequence)
+    {
+        _canMove = false;
+    }
+
+    private void OnEndMinigameInput()
+    {
+        _canMove = true;
     }
 
     private void OnTriggerForIntecation(bool entered)

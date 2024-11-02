@@ -9,6 +9,7 @@ public class TriggerForInteraction : MonoBehaviour
 
     // Переменная для отслеживания, находится ли игрок в зоне
     protected bool ghostInZone = false;
+    protected bool isPlayerCanInteract = true;
 
     protected void OnTriggerEnter2D(Collider2D other)
     {
