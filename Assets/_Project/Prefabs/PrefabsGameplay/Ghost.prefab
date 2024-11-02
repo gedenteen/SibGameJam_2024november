@@ -133,10 +133,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _movementSpeed: 5
-  _characterSprite: {fileID: 0}
+  _characterSprite: {fileID: 444000688090363240}
   _mySpriteButtonE: {fileID: 930538800061400123}
-  _animator: {fileID: 0}
-  IsMoving: 0
 --- !u!58 &5488746500113446804
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -171,7 +169,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.4
 --- !u!50 &1053017418657127416
 Rigidbody2D:
   serializedVersion: 4
@@ -209,8 +207,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2360653990942847287}
   - component: {fileID: 444000688090363240}
+  - component: {fileID: 566291635100026979}
   m_Layer: 7
-  m_Name: CharacterSprite
+  m_Name: AngelSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -225,8 +224,8 @@ Transform:
   m_GameObject: {fileID: 5687453272872822848}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.08, y: 0.08, z: 0.79999995}
+  m_LocalPosition: {x: 0, y: 0.18, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 9.999999}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 209349850419638130}
@@ -272,7 +271,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 256
-  m_Sprite: {fileID: 21300000, guid: eb6ec6f673b04a24c81d9d80b415532f, type: 3}
+  m_Sprite: {fileID: -804130912, guid: 01b74e3bba841de49a62f6ef70369480, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -283,3 +282,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &566291635100026979
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5687453272872822848}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0c7d51609222f6f439bcaf1b508419b9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

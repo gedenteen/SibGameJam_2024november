@@ -9,6 +9,7 @@ public class GhostController : MonoBehaviour
     [SerializeField] private float _movementSpeed;
 
     [Header("References")]
+    [SerializeField] private SpriteRenderer _characterSprite;
     [SerializeField] private SpriteRenderer _mySpriteButtonE;
 
     private void Awake()
@@ -20,6 +21,11 @@ public class GhostController : MonoBehaviour
     {
         Vector3 input = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
         transform.position += input * _movementSpeed * Time.deltaTime;
+
+        if (input.x != 0)
+        {
+            _characterSprite.flipX = input.x > 0f ? false : true;
+        }
     }
 
     private void OnDestroy()
