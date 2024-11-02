@@ -18,8 +18,8 @@ public class DialogueTrigger : MonoBehaviour
     private void StartDialogue()
     {
         Debug.Log("Начинается диалог...");
-        // Здесь можно вызвать ваш метод для показа диалога.
-        // Например: DialogueManager.Instance.StartDialogue(dialogueData);
+        
+        DialogueController.Instance.Activate(true, 0.3f);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
