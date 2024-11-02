@@ -6,10 +6,17 @@ public class MusicController : MonoBehaviour
 {
     [SerializeField] private AudioSource _myAudioSource;
     [SerializeField] private AudioClip _trackTest;
+    [SerializeField] private AudioClip _trackMainMenu;
 
-    private void Start()
+    private void Awake()
     {
-        _myAudioSource.clip = _trackTest;
+        OnMainMenuLoad();
+        GlobalEvents.EventMainMenuLoaded.AddListener(OnMainMenuLoad);
+    }
+
+    private void OnMainMenuLoad()
+    {
+        _myAudioSource.clip = _trackMainMenu;
         _myAudioSource.Play();
     }
 }

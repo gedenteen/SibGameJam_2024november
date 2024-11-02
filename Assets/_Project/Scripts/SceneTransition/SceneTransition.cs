@@ -42,6 +42,7 @@ public class SceneTransition : MonoBehaviour
     public async void SwitchToMainMenu()
     {
         await SwitchToSceneAsync((int)SceneNames.MainMenu);
+        GlobalEvents.EventMainMenuLoaded?.Invoke();
     }
 
     private async UniTask SwitchToSceneAsync(int sceneIndex)
