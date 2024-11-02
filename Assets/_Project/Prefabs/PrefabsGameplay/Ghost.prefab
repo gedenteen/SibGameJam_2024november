@@ -133,7 +133,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _movementSpeed: 5
+  _characterSprite: {fileID: 0}
   _mySpriteButtonE: {fileID: 930538800061400123}
+  _animator: {fileID: 0}
+  IsMoving: 0
 --- !u!58 &5488746500113446804
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -207,7 +210,7 @@ GameObject:
   - component: {fileID: 2360653990942847287}
   - component: {fileID: 444000688090363240}
   m_Layer: 7
-  m_Name: Shlepa
+  m_Name: CharacterSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

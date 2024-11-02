@@ -53,8 +53,8 @@ public class LevelMenu : UiPanel
 
     private void LoadMainMenu()
     {
-        //SceneManager.LoadScene(0);
         SceneTransition.instance.SwitchToMainMenu();
+        Time.timeScale = 1f;
     }
 
     private void ShowSettings()
