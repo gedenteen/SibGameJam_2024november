@@ -1,14 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class DeathTrigger : MonoBehaviour
 {
     [SerializeField] private SpriteRenderer _mySpriteRenderer;
+    [SerializeField] private bool _hideSpriteInGame = true;
 
     private void Awake()
     {
-        //_mySpriteRenderer.gameObject.SetActive(false);
+        if (_hideSpriteInGame)
+        {
+            _mySpriteRenderer.gameObject.SetActive(false);
+        }
     }
 
     protected void OnTriggerEnter2D(Collider2D other)
@@ -22,8 +27,4 @@ public class DeathTrigger : MonoBehaviour
             ivanController.Die();
         }
     }
-
-    // protected void OnTriggerExit2D(Collider2D other)
-    // {
-    // }
 }
