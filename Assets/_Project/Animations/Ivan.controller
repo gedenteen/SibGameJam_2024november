@@ -114,7 +114,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: IvanDeath
-  m_Speed: 0.2
+  m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
   m_StateMachineBehaviours: []
@@ -174,7 +174,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: IvanIdle
-  m_Speed: 0.04
+  m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 6490948443580543458}
@@ -253,7 +253,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: IvanRun
-  m_Speed: 0.08
+  m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -4437838805072297846}
