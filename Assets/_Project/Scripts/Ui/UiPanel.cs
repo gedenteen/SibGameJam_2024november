@@ -14,7 +14,6 @@ public class UiPanel : MonoBehaviour
     {
         if (canvasGroup != null)
         {
-            canvasGroup.gameObject.SetActive(active);
             ChangeAlpha(active, seconds);
             canvasGroup.interactable = active; // Устанавливаем интерактивность в зависимости от active
             // canvasGroup.blocksRaycasts = active; // Устанавливаем блокировку событий мыши в зависимости от active
@@ -27,6 +26,11 @@ public class UiPanel : MonoBehaviour
 
     private async void ChangeAlpha(bool active, float seconds)
     {
+        if (active) // если включаем, то включаем сразу
+        {
+            canvasGroup.gameObject.SetActive(active);
+        }
+
         if (seconds == 0f)
         {
             canvasGroup.alpha = active ? 1 : 0; // Устанавливаем прозрачность в 1 (включено) или 0 (выключено)
@@ -44,6 +48,11 @@ public class UiPanel : MonoBehaviour
                 await SmoothChangeAlpha(seconds, 1f, 0f);
             }
         }
+
+        if (!active) // если выключаем, то выключаем в конце
+        {
+            canvasGroup.gameObject.SetActive(active);
+        }
     }
 
     private async UniTask SmoothChangeAlpha(float seconds, float startAlpha, float endAlpha)
@@ -59,7 +68,7 @@ public class UiPanel : MonoBehaviour
         {
             canvasGroup.alpha = Mathf.Lerp(startAlpha, endAlpha, timer / seconds);
             timer += Time.fixedDeltaTime;
-            await UniTask.WaitForFixedUpdate();
+            await UniTask.Yield();
         }
     }
 }

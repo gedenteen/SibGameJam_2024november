@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class DialogueTrigger : MonoBehaviour
 {
+    [SerializeField] private TextsToDisplay _textToDisplay;
+
     // Переменная для отслеживания, находится ли игрок в зоне
     private bool playerInZone = false;
 
@@ -19,7 +21,7 @@ public class DialogueTrigger : MonoBehaviour
     {
         Debug.Log("Начинается диалог...");
         
-        DialogueController.Instance.Activate(true, 0.3f);
+        DialogueController.Instance.ActivateAndSetDialogue(true, _textToDisplay);
     }
 
     private void OnTriggerEnter2D(Collider2D other)

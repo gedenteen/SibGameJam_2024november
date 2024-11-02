@@ -3,13 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.Events;
 
 // A class that output text character-by-character with a delay (it can be called as printing effect)
 public class PrintingText : MonoBehaviour
 {
-    [SerializeField] TextsToDisplay textsToDisplay;
+    [Header("References")]
+    public TextsToDisplay textsToDisplay;
     [SerializeField] TextMeshProUGUI textMesh;
     [SerializeField] Button button;
+
+    public UnityEvent eventDialogueIsOver = new UnityEvent();
 
     private bool isTyping = false;
     private IEnumerator coroutineForTextAnimation = null;
@@ -71,6 +75,10 @@ public class PrintingText : MonoBehaviour
             if (indexOfText < textsToDisplay.texts.Count)
             {
                 PrintText();
+            }
+            else
+            {
+                eventDialogueIsOver?.Invoke();
             }
         }
     }
