@@ -12,6 +12,7 @@ public class IvanController : MonoBehaviour
     [Header("References")]
     [SerializeField] private SpriteRenderer _characterSprite;
     [SerializeField] private Animator _animator;
+    [SerializeField] private CapsuleCollider2D _myCollider2D;
 
 
     private void Update()
@@ -29,5 +30,12 @@ public class IvanController : MonoBehaviour
         }
 
         _animator.SetBool("IsMoving", IsMoving);
+    }
+
+    public void Die()
+    {
+        _animator.SetBool("Death", true);
+        _movementSpeed = 0f;
+        _movementDirection = Vector3.zero;
     }
 }

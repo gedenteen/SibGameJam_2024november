@@ -52,6 +52,7 @@ MonoBehaviour:
   IsMoving: 0
   _characterSprite: {fileID: 8604692766492208108}
   _animator: {fileID: 5498821055250986867}
+  _myCollider2D: {fileID: 6656706282226081510}
 --- !u!50 &6238561758684499070
 Rigidbody2D:
   serializedVersion: 4
@@ -210,7 +211,7 @@ Animator:
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: c799b291f03af20429a664ea6c9a8d05, type: 2}
-  m_CullingMode: 0
+  m_CullingMode: 2
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
