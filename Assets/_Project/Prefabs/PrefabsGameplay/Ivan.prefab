@@ -47,8 +47,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0ed1c3fc83bac441a477327a4516896, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _movementSpeed: 1
-  _movementDirection: {x: 1, y: 0, z: 0}
+  _movementSpeed: 2
+  _movementDirection: {x: 0, y: 0, z: 0}
   IsMoving: 0
   _characterSprite: {fileID: 8604692766492208108}
   _animator: {fileID: 5498821055250986867}
@@ -168,7 +168,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 43924aa1ff9e346479b0d729b55cea5a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

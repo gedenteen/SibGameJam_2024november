@@ -292,7 +292,7 @@ TilemapRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 43924aa1ff9e346479b0d729b55cea5a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1228,7 +1228,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1129392863}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2c7bb4e6d1b09f7448f2632d6309f361, type: 3}
   m_Name: 
@@ -1645,7 +1645,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1424289041}
   - component: {fileID: 1424289040}
-  - component: {fileID: 1424289042}
   m_Layer: 0
   m_Name: Layer-0
   m_TagString: Untagged
@@ -1673,7 +1672,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 43924aa1ff9e346479b0d729b55cea5a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1720,19 +1719,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1129392865}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1424289042
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1424289039}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 384f6d36f92c4364d83e42f250c974ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parallaxFactor: 1
 --- !u!1 &1662639382
 GameObject:
   m_ObjectHideFlags: 0
@@ -2011,14 +1997,6 @@ PrefabInstance:
     - target: {fileID: 3516007166851831009, guid: 2cec699df75e30247a3426676d140570, type: 3}
       propertyPath: m_Name
       value: Ivan
-      objectReference: {fileID: 0}
-    - target: {fileID: 8322349628628072246, guid: 2cec699df75e30247a3426676d140570, type: 3}
-      propertyPath: _movementSpeed
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8322349628628072246, guid: 2cec699df75e30247a3426676d140570, type: 3}
-      propertyPath: _movementDirection.x
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
