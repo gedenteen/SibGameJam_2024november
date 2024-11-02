@@ -3075,7 +3075,7 @@ MonoBehaviour:
   canvasGroup: {fileID: 575664277}
   _printingText: {fileID: 777886313}
   _mainText: {fileID: 941095666}
-  _delayForActivate: 0.7
+  _delayForActivate: 0.5
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
