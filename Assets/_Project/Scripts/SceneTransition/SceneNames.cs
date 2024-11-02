@@ -6,6 +6,6 @@ using UnityEngine;
 public enum SceneNames
 {
     MainMenu = 0,
-    Level1,
+    Level1_Swamp,
     Boot
 }

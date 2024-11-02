@@ -42,11 +42,12 @@ public class SceneTransition : MonoBehaviour
     public async void SwitchToMainMenu()
     {
         await SwitchToSceneAsync((int)SceneNames.MainMenu);
-        GlobalEvents.EventMainMenuLoaded?.Invoke();
     }
 
     private async UniTask SwitchToSceneAsync(int sceneIndex)
     {
+        GlobalEvents.EventStartSceneLoading?.Invoke(sceneIndex);
+
         // Activate Loading Screen
         loadingScreen.UpdateProgress(0f, true);
         loadingScreen.Activate(true, timeForActivateLoadingScreen);
@@ -68,5 +69,7 @@ public class SceneTransition : MonoBehaviour
         // Deactivate Loading Screen
         loadingScreen.UpdateProgress(1f, true);
         loadingScreen.Activate(false, timeForActivateLoadingScreen);
+
+        GlobalEvents.EventEndSceneLoading?.Invoke(sceneIndex);
     }
 }
