@@ -1,16 +1,13 @@
 using UnityEngine;
 
-public class DialogueTrigger : MonoBehaviour
+public class DialogueTrigger : TriggerForInteraction // наследование!
 {
     [SerializeField] private TextsToDisplay _textToDisplay;
-
-    // Переменная для отслеживания, находится ли игрок в зоне
-    private bool playerInZone = false;
 
     void Update()
     {
         // Проверяем, находится ли игрок в зоне и нажата ли клавиша E
-        if (playerInZone && Input.GetKeyDown(KeyCode.E))
+        if (ghostInZone && Input.GetKeyDown(KeyCode.E))
         {
             StartDialogue();
         }
@@ -22,17 +19,5 @@ public class DialogueTrigger : MonoBehaviour
         Debug.Log("Начинается диалог...");
         
         DialogueController.Instance.ActivateAndSetDialogue(true, _textToDisplay);
-    }
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        Debug.Log("DialogueTrigger: OnTriggerEnter2D");
-        playerInZone = true;
-    }
-
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        Debug.Log("DialogueTrigger: OnTriggerExit2D");
-        playerInZone = false;
     }
 }
