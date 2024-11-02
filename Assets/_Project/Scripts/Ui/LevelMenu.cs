@@ -46,7 +46,7 @@ public class LevelMenu : UiPanel
 
     private new void Activate(bool active)
     {
-        Time.timeScale = active ? 1.0f : 0.0f;
+        Time.timeScale = active ? 0f : 1f;
         buttonPause.gameObject.SetActive(!active);
         base.Activate(active);
     }
