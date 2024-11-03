@@ -29,7 +29,7 @@ public class TriggerForInteraction : MonoBehaviour
             return;
         }
 
-        //Debug.Log("TriggerForInteraction: OnTriggerEnter2D");
+        Debug.Log($"TriggerForInteraction: OnTriggerEnter2D: my name = {gameObject.name}");
         _ghostInZone = true;
         EventGhostInZone?.Invoke(true);
     }

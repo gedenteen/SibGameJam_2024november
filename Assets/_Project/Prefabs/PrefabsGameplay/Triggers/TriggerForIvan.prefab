@@ -52,7 +52,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 43924aa1ff9e346479b0d729b55cea5a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -205,6 +205,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mySpriteRenderer: {fileID: 312092753821643419}
   _hideSpriteInGame: 1
-  _methodForInvoke:
-    m_PersistentCalls:
-      m_Calls: []
+  _eventsForInvoke: []
