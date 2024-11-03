@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.PlayerLoop;
 
 public class CanvasForGhost : MonoBehaviour
@@ -21,17 +22,8 @@ public class CanvasForGhost : MonoBehaviour
     [SerializeField] private string _keySequence = "";
     [SerializeField] private int _keySequenceIndex = 0;
     [SerializeField] private float _timer = 0;
-
-    private void Awake()
-    {
-        GlobalEvents.EventStartMinigameInput.AddListener(StartMinigameInput);
-    }
-
-    private void OnDestroy()
-    {
-        GlobalEvents.EventStartMinigameInput.RemoveListener(StartMinigameInput);
-    }
-
+    [SerializeField] private List<UnityEvent> _eventsToInvoke;
+    
     private void Update()
     {
         if (_isMinigameInput)
@@ -61,15 +53,17 @@ public class CanvasForGhost : MonoBehaviour
         _imageOfKeyForInteraction.gameObject.SetActive(activatate);
     }
 
-    private void StartMinigameInput(string keySequence, float time)
+    public void StartMinigameInput(string keySequence, float time, List<UnityEvent> eventsToInvoke)
     {
-        StartMinigameInputAsync(keySequence, time);
+        StartMinigameInputAsync(keySequence, time, eventsToInvoke);
     }
 
-    private async void StartMinigameInputAsync(string keySequence, float time)
+    private async void StartMinigameInputAsync(string keySequence, float time, List<UnityEvent> eventsToInvoke)
     {
         // надо подждать 1 кадр, иначе в Update получим нажатую E, которую нажимали для триггера
         await UniTask.Yield();
+
+        _eventsToInvoke = eventsToInvoke;
 
         _timer = time;
         _textForTimer.text = time.ToString("F1");
@@ -121,6 +115,11 @@ public class CanvasForGhost : MonoBehaviour
 
                 if (_keySequenceIndex == _keySequence.Length)
                 {
+                    // Успешное заверешение мини-игры
+                    for (int j = 0; j < _eventsToInvoke.Count; j++)
+                    {
+                        _eventsToInvoke[j].Invoke();
+                    }
                     StopMinigameInput();
                     return;
                 }

@@ -14,7 +14,7 @@ public class TriggerForInteraction : MonoBehaviour
     protected bool _ghostInZone = false;
     protected bool _isPlayerCanInteract = true;
 
-    private void Awake()
+    protected void Awake()
     {
         if (_hideSpriteInGame)
         {

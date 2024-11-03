@@ -43,7 +43,7 @@ public class GhostController : MonoBehaviour
         GlobalEvents.EventEndMinigameInput.RemoveListener(OnEndMinigameInput);
     }
 
-    private void OnStartMinigameInput(string keySequence, float time)
+    private void OnStartMinigameInput()
     {
         _canMove = false;
     }
