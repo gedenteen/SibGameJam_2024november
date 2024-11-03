@@ -308,7 +308,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  _onlyOneInteraction: 1
+  _onlyOneInteraction: 0
 --- !u!1 &8353502502060841504
 GameObject:
   m_ObjectHideFlags: 0

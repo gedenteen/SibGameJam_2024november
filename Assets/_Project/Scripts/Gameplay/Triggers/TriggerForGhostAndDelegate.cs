@@ -11,7 +11,7 @@ public class TriggerForGhostAndDelegate : TriggerForInteraction
     void Update()
     {
         // Проверяем, находится ли игрок в зоне и нажата ли клавиша E
-        if (_ghostInZone && Input.GetKeyDown(KeyCode.E))
+        if (_isPlayerCanInteract && _ghostInZone && Input.GetKeyDown(KeyCode.E))
         {
             _methodForInvoke.Invoke();
 
