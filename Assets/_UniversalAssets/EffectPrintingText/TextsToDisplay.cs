@@ -10,4 +10,8 @@ public class TextsToDisplay : ScriptableObject
     public List<string> texts;
     [SerializeField]
     public float delayForWrite = 0.04f;
+    [SerializeField]
+    public Sprite spriteChar1;
+    [SerializeField]
+    public Sprite spriteChar2;
 }

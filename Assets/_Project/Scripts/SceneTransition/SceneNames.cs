@@ -8,5 +8,6 @@ public enum SceneNames
     MainMenu = 0,
     Level1_Swamp,
     Level2_Forest,
+    Level3_Izba,
     Boot
 }
