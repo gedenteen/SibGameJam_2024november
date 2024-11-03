@@ -16,3 +16,5 @@ MonoBehaviour:
   - "\u0422\u0443\u0442 \u0434\u043E\u043B\u0436\u0435\u043D \u0431\u044B\u0442\u044C
     \u0434\u0438\u0430\u043B\u043E\u0433 \u0441 \u0432\u043E\u0434\u044F\u043D\u044B\u043C"
   delayForWrite: 0.06
+  spriteChar1: {fileID: 21300000, guid: 724cd055f0efe0641bf0806576606b4a, type: 3}
+  spriteChar2: {fileID: 21300000, guid: c2e5d5e3077571e4898592557566917a, type: 3}
