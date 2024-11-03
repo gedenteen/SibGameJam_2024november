@@ -24,14 +24,14 @@ public class TriggerForInteraction : MonoBehaviour
 
     protected void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("TriggerForInteraction: OnTriggerEnter2D");
+        //Debug.Log("TriggerForInteraction: OnTriggerEnter2D");
         _ghostInZone = true;
         EventGhostInZone?.Invoke(true);
     }
 
     protected void OnTriggerExit2D(Collider2D other)
     {
-        Debug.Log("TriggerForInteraction: OnTriggerExit2D");
+        //Debug.Log("TriggerForInteraction: OnTriggerExit2D");
         _ghostInZone = false;
         EventGhostInZone?.Invoke(false);
     }

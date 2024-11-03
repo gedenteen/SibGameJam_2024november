@@ -49,7 +49,7 @@
         {
             "userAdded": false,
             "type": "UnityEngine.Material",
-            "defaultInstantiationMode": 0
+            "defaultInstantiationMode": 1
         },
         {
             "userAdded": false,

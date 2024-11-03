@@ -21,7 +21,7 @@ public class TriggerForIvan : MonoBehaviour
     {
         IvanController ivanController;
         bool itIsIvan = other.TryGetComponent<IvanController>(out ivanController);
-        Debug.Log($"TriggerForIvan: OnTriggerEnter2D: itIsIvan={itIsIvan}");
+        //Debug.Log($"TriggerForIvan: OnTriggerEnter2D: itIsIvan={itIsIvan}");
 
         if (itIsIvan)
         {
