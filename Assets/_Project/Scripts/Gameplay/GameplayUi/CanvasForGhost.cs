@@ -23,7 +23,7 @@ public class CanvasForGhost : MonoBehaviour
     [SerializeField] private int _keySequenceIndex = 0;
     [SerializeField] private float _timer = 0;
     [SerializeField] private List<UnityEvent> _eventsToInvoke;
-    
+
     private void Update()
     {
         if (_isMinigameInput)
@@ -103,7 +103,7 @@ public class CanvasForGhost : MonoBehaviour
         Debug.Log("Pressed keys: " + pressedKeys);
         for (int i = 0; i < pressedKeys.Length; i++)
         {
-            if (pressedKeys[i] == _keySequence[_keySequenceIndex])
+            if (char.ToLower(pressedKeys[i]) == char.ToLower(_keySequence[_keySequenceIndex]))
             {
                 _imagesOfKey[_keySequenceIndex].Image.color = _colorForPressedKey;
                 _keySequenceIndex++;

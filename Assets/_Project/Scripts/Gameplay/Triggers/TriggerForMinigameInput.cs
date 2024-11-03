@@ -14,7 +14,7 @@ public class TriggerForMinigameInput : TriggerForInteraction //наследов�
     [SerializeField] private float _time;
     [SerializeField] private List<UnityEvent> _eventsToInvoke;
 
-    private void Awake()
+    private new void Awake()
     {
         base.Awake();
         GlobalEvents.EventEndMinigameInput.AddListener(OnEndMinigame);
