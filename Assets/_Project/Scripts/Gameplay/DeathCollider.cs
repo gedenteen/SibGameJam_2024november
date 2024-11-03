@@ -29,6 +29,7 @@ public class DeathCollider : MonoBehaviour
 
     public void Unfreeze()
     {
+        _myRigidbody2D.constraints &= ~RigidbodyConstraints2D.FreezeRotation;
         _myRigidbody2D.constraints &= ~RigidbodyConstraints2D.FreezePositionY;
         _myRigidbody2D.constraints &= ~RigidbodyConstraints2D.FreezePositionX;
         
