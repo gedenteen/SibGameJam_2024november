@@ -7,7 +7,7 @@ public class TriggerForIvan : MonoBehaviour
 {
     [SerializeField] private SpriteRenderer _mySpriteRenderer;
     [SerializeField] private bool _hideSpriteInGame = true;
-    [SerializeField] private UnityEvent _methodForInvoke;
+    [SerializeField] private List<UnityEvent> _eventsForInvoke;
 
     private void Awake()
     {
@@ -25,13 +25,16 @@ public class TriggerForIvan : MonoBehaviour
 
         if (itIsIvan)
         {
-            if (_methodForInvoke == null)
+            if (_eventsForInvoke == null)
             {
                 Debug.Log($"TriggerForIvan: OnTriggerEnter2D: _methodForInvoke is null");
                 return;
             }
 
-            _methodForInvoke.Invoke();
+            for (int i = 0; i < _eventsForInvoke.Count; i++)
+            {
+                _eventsForInvoke[i].Invoke();
+            }
         }
     }
 }

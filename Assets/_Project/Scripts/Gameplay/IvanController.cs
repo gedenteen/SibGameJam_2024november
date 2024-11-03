@@ -65,4 +65,9 @@ public class IvanController : MonoBehaviour
     {
         _movementDirection = new Vector3(1f, 0f, 0f);
     }
+
+    public void Stop()
+    {
+        _movementDirection = Vector3.zero;
+    }
 }
