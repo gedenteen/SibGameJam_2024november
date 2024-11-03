@@ -8,18 +8,27 @@ public class IvanController : MonoBehaviour
     [SerializeField] private float _movementSpeed;
     [SerializeField] private Vector3 _movementDirection;
     public bool IsMoving = false;
+    public bool IsGrounded = false;
 
     [Header("References")]
     [SerializeField] private SpriteRenderer _characterSprite;
     [SerializeField] private Animator _animator;
-    [SerializeField] private CapsuleCollider2D _myCollider2D;
+    [SerializeField] private Collider2D _myCollider2D;
 
+    [Header("Ground Check")]
+    [SerializeField] private LayerMask _groundLayer;
 
     private void Update()
     {
-        transform.position += _movementDirection * _movementSpeed * Time.deltaTime;
+        // Проверка, на земле ли персонаж
+        CheckGrounded();
 
-        if (_movementDirection.x != 0)
+        // Движение только если персонаж находится на земле
+        float multiplyerOfGrounded = IsGrounded ? 1f : 0.25f;
+        transform.position += _movementDirection * _movementSpeed * Time.deltaTime * multiplyerOfGrounded;
+
+        // Определение направления и обновление анимации
+        if (_movementDirection.x != 0 && IsGrounded)
         {
             _characterSprite.flipX = _movementDirection.x > 0f ? false : true;
             IsMoving = true;
@@ -30,6 +39,12 @@ public class IvanController : MonoBehaviour
         }
 
         _animator.SetBool("IsMoving", IsMoving);
+    }
+
+    private void CheckGrounded()
+    {
+        // Проверка соприкосновения CapsuleCollider2D с землей
+        IsGrounded = _myCollider2D.IsTouchingLayers(_groundLayer);
     }
 
     public void Die()

@@ -14,7 +14,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 935782587802630903, guid: a2a69dc00ddc05b4cb7ba28659ad9c6a, type: 3}
       propertyPath: m_Name
-      value: DialogueTriggerWaterguy Variant
+      value: DialogueTriggerWaterguy
       objectReference: {fileID: 0}
     - target: {fileID: 4018243075792921912, guid: a2a69dc00ddc05b4cb7ba28659ad9c6a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -95,5 +95,34 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5721547106836836588, guid: a2a69dc00ddc05b4cb7ba28659ad9c6a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6170466131736783481}
   m_SourcePrefab: {fileID: 100100000, guid: a2a69dc00ddc05b4cb7ba28659ad9c6a, type: 3}
+--- !u!1 &2599207256366269492 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5721547106836836588, guid: a2a69dc00ddc05b4cb7ba28659ad9c6a, type: 3}
+  m_PrefabInstance: {fileID: 7743158897048302808}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &6170466131736783481
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2599207256366269492}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 54a8e4f2b6be6a84d91b2cec38634814, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

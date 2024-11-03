@@ -1461,6 +1461,7 @@ GameObject:
   - component: {fileID: 4018243077048394631}
   - component: {fileID: 6472205577319404766}
   - component: {fileID: 6472205577319404767}
+  - component: {fileID: 6472205577319404768}
   m_Layer: 0
   m_Name: TriggerForGhostAndDeathRock
   m_TagString: Untagged
@@ -2053,8 +2054,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mySpriteRenderer: {fileID: 4888593658084913982}
   _hideSpriteInGame: 0
-  _methodForInvoke:
-    m_PersistentCalls:
+  _eventsForInvoke:
+  - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1877264257}
         m_TargetAssemblyTypeName: DeathCollider, Assembly-CSharp
@@ -2068,7 +2069,33 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 6472205577319404768}
+        m_TargetAssemblyTypeName: SpriteRenderChanger, Assembly-CSharp
+        m_MethodName: SetNextSprite
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   _onlyOneInteraction: 1
+--- !u!114 &6472205577319404768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 935782588685204552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26f6c74c3ac0f6b4786a310201bdf0d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _targetSpriteRenderer: {fileID: 4888593658084913982}
+  _nextSprite: {fileID: 866988224, guid: a546ea3cb18fb7d408391d03eee72f19, type: 3}
 --- !u!61 &7285194575901937724
 BoxCollider2D:
   m_ObjectHideFlags: 0
