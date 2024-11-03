@@ -8,20 +8,20 @@ public class TriggerForInteraction : MonoBehaviour
     public static UnityEvent<bool> EventGhostInZone = new UnityEvent<bool>();
 
     // Переменная для отслеживания, находится ли игрок в зоне
-    protected bool ghostInZone = false;
-    protected bool isPlayerCanInteract = true;
+    protected bool _ghostInZone = false;
+    protected bool _isPlayerCanInteract = true;
 
     protected void OnTriggerEnter2D(Collider2D other)
     {
         Debug.Log("TriggerForInteraction: OnTriggerEnter2D");
-        ghostInZone = true;
+        _ghostInZone = true;
         EventGhostInZone?.Invoke(true);
     }
 
     protected void OnTriggerExit2D(Collider2D other)
     {
         Debug.Log("TriggerForInteraction: OnTriggerExit2D");
-        ghostInZone = false;
+        _ghostInZone = false;
         EventGhostInZone?.Invoke(false);
     }
 }

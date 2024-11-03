@@ -20,7 +20,7 @@ public class TriggerForMinigameInput : TriggerForInteraction //наследов�
     void Update()
     {
         // Проверяем, находится ли игрок в зоне и нажата ли клавиша E
-        if (isPlayerCanInteract && ghostInZone && Input.GetKeyDown(KeyCode.E))
+        if (_isPlayerCanInteract && _ghostInZone && Input.GetKeyDown(KeyCode.E))
         {
             StartMinigame();
         }
@@ -30,12 +30,12 @@ public class TriggerForMinigameInput : TriggerForInteraction //наследов�
     private void StartMinigame()
     {
         GlobalEvents.EventStartMinigameInput.Invoke(_keySequence, _time);
-        isPlayerCanInteract = false;
+        _isPlayerCanInteract = false;
         EventGhostInZone?.Invoke(false);
     }
 
     private void OnEndMinigame()
     {   
-        isPlayerCanInteract = true;
+        _isPlayerCanInteract = true;
     }
 }

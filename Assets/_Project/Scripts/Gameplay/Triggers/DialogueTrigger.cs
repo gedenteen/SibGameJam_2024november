@@ -7,7 +7,7 @@ public class DialogueTrigger : TriggerForInteraction // наследование
     void Update()
     {
         // Проверяем, находится ли игрок в зоне и нажата ли клавиша E
-        if (ghostInZone && Input.GetKeyDown(KeyCode.E))
+        if (_ghostInZone && Input.GetKeyDown(KeyCode.E))
         {
             StartDialogue();
         }
