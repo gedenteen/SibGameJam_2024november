@@ -114,6 +114,11 @@ public class CanvasForGhost : MonoBehaviour
                 _imagesOfKey[_keySequenceIndex].Image.color = _colorForPressedKey;
                 _keySequenceIndex++;
 
+                if (SoundsController.Instance != null)
+                {
+                    SoundsController.Instance.PlayBlip();
+                }
+
                 if (_keySequenceIndex == _keySequence.Length)
                 {
                     StopMinigameInput();
