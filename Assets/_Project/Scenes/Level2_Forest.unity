@@ -175,7 +175,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 43924aa1ff9e346479b0d729b55cea5a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -714,7 +714,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 43924aa1ff9e346479b0d729b55cea5a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -974,12 +974,12 @@ GameObject:
   - component: {fileID: 544079039}
   - component: {fileID: 544079038}
   m_Layer: 0
-  m_Name: TriggerForGhostAndBridge
+  m_Name: TEST_TriggerForGhostAndBridge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &544079035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1551,6 +1551,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2989417982464909281, guid: 2cec699df75e30247a3426676d140570, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 43924aa1ff9e346479b0d729b55cea5a, type: 2}
     - target: {fileID: 3516007166851831009, guid: 2cec699df75e30247a3426676d140570, type: 3}
       propertyPath: m_Name
       value: Ivan
@@ -1890,6 +1894,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 312092753821643419, guid: 0b487c58c9f80374096d47fe034816e6, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 43924aa1ff9e346479b0d729b55cea5a, type: 2}
     - target: {fileID: 3020793214361677261, guid: 0b487c58c9f80374096d47fe034816e6, type: 3}
       propertyPath: _methodForInvoke.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -2612,7 +2620,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 43924aa1ff9e346479b0d729b55cea5a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

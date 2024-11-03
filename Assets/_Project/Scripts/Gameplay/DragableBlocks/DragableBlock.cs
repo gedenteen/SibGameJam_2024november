@@ -25,6 +25,11 @@ public class DragableBlock : TriggerForInteraction // наследование!
             _rigidbody2DOfCollider.transform.position = _ghostContoller.transform.position + _startOffset;
         }
 
+        if (!_isPlayerCanInteract)
+        {
+            return;
+        }
+
         // Проверяем, находится ли игрок в зоне и нажата ли клавиша E
         if (_ghostInZone && Input.GetKeyDown(KeyCode.E))
         {
@@ -50,5 +55,13 @@ public class DragableBlock : TriggerForInteraction // наследование!
     {
         _rigidbody2DOfCollider.gravityScale = 1f;
         _isFollow = false;
+    }
+
+    public void MarkAsUninteractable()
+    {
+        _isPlayerCanInteract = false;
+        StopFollow();
+        _ghostInZone = false;
+        EventGhostInZone?.Invoke(false);
     }
 }

@@ -24,6 +24,11 @@ public class TriggerForInteraction : MonoBehaviour
 
     protected void OnTriggerEnter2D(Collider2D other)
     {
+        if (!_isPlayerCanInteract)
+        {
+            return;
+        }
+
         //Debug.Log("TriggerForInteraction: OnTriggerEnter2D");
         _ghostInZone = true;
         EventGhostInZone?.Invoke(true);

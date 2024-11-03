@@ -21,6 +21,7 @@ public class PlaceForDragableBlock : MonoBehaviour
         if (success)
         {
             _dragableBlocksManager.MarkDragableBlockAsCompleted(dragableBlock);
+            dragableBlock.MarkAsUninteractable();
         }
     }
 }
