@@ -7,9 +7,9 @@ using Cysharp.Threading.Tasks;
 
 public class SceneTransition : MonoBehaviour
 {
-    public static SceneTransition instance { get; private set;} = null;
+    public static SceneTransition instance { get; private set;}
 
-    [SerializeField] private LoadingScreen loadingScreen;
+    private LoadingScreen loadingScreen;
     [SerializeField] private float timeForActivateLoadingScreen = 0.5f;
     private AsyncOperation loadingSceneOperation;
 
@@ -25,6 +25,9 @@ public class SceneTransition : MonoBehaviour
             Destroy(gameObject);
             return;
         }
+
+        loadingScreen = FindObjectOfType<LoadingScreen>(); // можно прокинуть ссылку вручную,
+        // из-за этой херни ломается билд под WebgL, Я НЕ ЗНАЮ ПОЧЕМУ
     }
 
     public async void SwitchToNextScene()

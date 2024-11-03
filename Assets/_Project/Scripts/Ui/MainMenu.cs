@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
+    [SerializeField] private SceneTransition _sceneTransition;
     [SerializeField] private Button buttonStart;
     [SerializeField] private Button buttonSettings;
     [SerializeField] private Button buttonQuit;
@@ -14,7 +15,7 @@ public class MainMenu : MonoBehaviour
 
     private void Awake()
     {
-        buttonStart.onClick.AddListener(SceneTransition.instance.SwitchToNextScene);
+        buttonStart.onClick.AddListener(_sceneTransition.SwitchToNextScene);
         buttonSettings.onClick.AddListener(ShowSettings);
 
 #if !UNITY_EDITOR && (UNITY_WEBGL || UNITY_IOS || UNITY_ANDROID)
