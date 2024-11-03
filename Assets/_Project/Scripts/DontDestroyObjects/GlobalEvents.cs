@@ -8,6 +8,6 @@ public static class GlobalEvents
     public static UnityEvent<int> EventStartSceneLoading = new UnityEvent<int>();
     public static UnityEvent<int> EventEndSceneLoading = new UnityEvent<int>();
     public static UnityEvent EventIvanIsDead = new UnityEvent();
-    public static UnityEvent<string> EventStartMinigameInput = new UnityEvent<string>();
+    public static UnityEvent<string, float> EventStartMinigameInput = new UnityEvent<string, float>();
     public static UnityEvent EventEndMinigameInput = new UnityEvent();
 }

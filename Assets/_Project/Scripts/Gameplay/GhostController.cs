@@ -11,7 +11,7 @@ public class GhostController : MonoBehaviour
 
     [Header("References")]
     [SerializeField] private SpriteRenderer _characterSprite;
-    [SerializeField] private SpriteRenderer _mySpriteButtonE;
+    [SerializeField] private CanvasForGhost _canvasForGhost;
 
     private void Awake()
     {
@@ -43,7 +43,7 @@ public class GhostController : MonoBehaviour
         GlobalEvents.EventEndMinigameInput.RemoveListener(OnEndMinigameInput);
     }
 
-    private void OnStartMinigameInput(string keySequence)
+    private void OnStartMinigameInput(string keySequence, float time)
     {
         _canMove = false;
     }
@@ -55,6 +55,6 @@ public class GhostController : MonoBehaviour
 
     private void OnTriggerForIntecation(bool entered)
     {
-        _mySpriteButtonE.gameObject.SetActive(entered);
+        _canvasForGhost.ShowButtonForInteraction(entered);
     }
 }

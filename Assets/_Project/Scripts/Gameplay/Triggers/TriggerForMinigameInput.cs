@@ -5,6 +5,7 @@ using UnityEngine;
 public class TriggerForMinigameInput : TriggerForInteraction //наследование!
 {
     [SerializeField] private string _keySequence;
+    [SerializeField] private float _time;
 
     private void Awake()
     {
@@ -28,7 +29,7 @@ public class TriggerForMinigameInput : TriggerForInteraction //наследов�
     // Метод для начала диалога
     private void StartMinigame()
     {
-        GlobalEvents.EventStartMinigameInput.Invoke(_keySequence);
+        GlobalEvents.EventStartMinigameInput.Invoke(_keySequence, _time);
         isPlayerCanInteract = false;
         EventGhostInZone?.Invoke(false);
     }
