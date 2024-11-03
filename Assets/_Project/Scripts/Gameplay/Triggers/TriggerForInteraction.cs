@@ -7,9 +7,20 @@ public class TriggerForInteraction : MonoBehaviour
 {
     public static UnityEvent<bool> EventGhostInZone = new UnityEvent<bool>();
 
+    [SerializeField] private SpriteRenderer _mySpriteRenderer;
+    [SerializeField] private bool _hideSpriteInGame = true;
+
     // Переменная для отслеживания, находится ли игрок в зоне
     protected bool _ghostInZone = false;
     protected bool _isPlayerCanInteract = true;
+
+    private void Awake()
+    {
+        if (_hideSpriteInGame)
+        {
+            _mySpriteRenderer.enabled = false;
+        }
+    }
 
     protected void OnTriggerEnter2D(Collider2D other)
     {

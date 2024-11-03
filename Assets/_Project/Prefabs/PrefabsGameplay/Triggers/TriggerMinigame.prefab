@@ -110,7 +110,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7332350247693971895}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 10.2, y: 1.02, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -175,5 +175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29b315f4aa3d36a4c8bfe0903d93771e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _mySpriteRenderer: {fileID: 6226465726278220945}
+  _hideSpriteInGame: 1
   _keySequence: shlepa
   _time: 3

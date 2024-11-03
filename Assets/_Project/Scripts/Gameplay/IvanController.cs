@@ -40,4 +40,14 @@ public class IvanController : MonoBehaviour
         
         GlobalEvents.EventIvanIsDead?.Invoke();
     }
+
+    public void SetMovementDirectionToLeft()
+    {
+        _movementDirection = new Vector3(-1f, 0f, 0f);
+    }
+
+    public void SetMovementDirectionToRight()
+    {
+        _movementDirection = new Vector3(1f, 0f, 0f);
+    }
 }
