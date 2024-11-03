@@ -28,10 +28,17 @@ public class TriggerForInteraction : MonoBehaviour
         {
             return;
         }
-
+    
         Debug.Log($"TriggerForInteraction: OnTriggerEnter2D: my name = {gameObject.name}");
-        _ghostInZone = true;
-        EventGhostInZone?.Invoke(true);
+        GhostController ghostController;
+        bool itIsGhost = other.TryGetComponent<GhostController>(out ghostController);
+        
+        if (itIsGhost)
+        {
+            _ghostInZone = true;
+            EventGhostInZone?.Invoke(true);
+        }
+
     }
 
     protected void OnTriggerExit2D(Collider2D other)

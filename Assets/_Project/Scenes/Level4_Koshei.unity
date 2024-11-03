@@ -2134,8 +2134,8 @@ PolygonCollider2D:
       - {x: 1.3727417, y: -1.5022904}
       - {x: -1.0188632, y: -1.5169107}
       - {x: -7.3088756, y: -1.5008126}
-      - {x: -7.3059897, y: -2.1240408}
-      - {x: -7.6277375, y: -2.1263545}
+      - {x: -7.3130693, y: -2.1240408}
+      - {x: -7.6302915, y: -2.1263545}
       - {x: -7.6283507, y: -1.5118212}
       - {x: -14.016317, y: -1.4800351}
       - {x: -13.996387, y: -3.5114121}
@@ -2793,7 +2793,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8490828210263534334, guid: 0b487c58c9f80374096d47fe034816e6, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
