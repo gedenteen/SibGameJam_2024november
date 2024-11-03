@@ -15,7 +15,8 @@ public class MusicController : MonoBehaviour
     [SerializeField] private AudioSource _myAudioSource2;
     [SerializeField] private AudioClip _trackTest;
     [SerializeField] private AudioClip _trackMainMenu;
-    [SerializeField] private AudioClip _trackLevelSwamp;
+    [SerializeField] private AudioClip _trackLevel1_Swamp;
+    [SerializeField] private AudioClip _trackLevel2_Forest;
 
     private void Awake()
     {
@@ -50,7 +51,10 @@ public class MusicController : MonoBehaviour
                     trackToPlay = _trackMainMenu;
                     break;
                 case SceneNames.Level1_Swamp:
-                    trackToPlay = _trackLevelSwamp;
+                    trackToPlay = _trackLevel1_Swamp;
+                    break;
+                case SceneNames.Level2_Forest:
+                    trackToPlay = _trackLevel2_Forest;
                     break;
                 default:
                     trackToPlay = _trackMainMenu;

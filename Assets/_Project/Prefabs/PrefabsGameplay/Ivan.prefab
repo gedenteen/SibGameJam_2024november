@@ -298,7 +298,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 8322349628628072246}
         m_TargetAssemblyTypeName: IvanController, Assembly-CSharp
-        m_MethodName: SetMovementDirectionToLeft
+        m_MethodName: SetMovementDirectionToRight
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -308,7 +308,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  _onlyOneInteraction: 0
+  _onlyOneInteraction: 1
 --- !u!1 &8353502502060841504
 GameObject:
   m_ObjectHideFlags: 0
