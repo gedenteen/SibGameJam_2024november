@@ -11,6 +11,7 @@ public class PrintingText : MonoBehaviour
     [Header("References")]
     public TextsToDisplay textsToDisplay;
     [SerializeField] TextMeshProUGUI textMesh;
+    [SerializeField] TextMeshProUGUI textForSpeaketName;
     [SerializeField] Button button;
 
     public UnityEvent eventDialogueIsOver = new UnityEvent();
@@ -32,13 +33,17 @@ public class PrintingText : MonoBehaviour
     public void PrintText()
     {
         textMesh.text = "";
-        coroutineForTextAnimation =
-            CoroutinePrint(textsToDisplay.texts[indexOfText], textsToDisplay.delayForWrite);
+        coroutineForTextAnimation = CoroutinePrint(
+            textsToDisplay.phrases[indexOfText].nameOfSpeaker,
+            textsToDisplay.phrases[indexOfText].text,
+            textsToDisplay.delayForWrite);
         StartCoroutine(coroutineForTextAnimation);
     }
 
-    private IEnumerator CoroutinePrint(string text, float delayForWrite = 0.05f)
+    private IEnumerator CoroutinePrint(string speakerName, string text, float delayForWrite = 0.05f)
     {
+        textForSpeaketName.text = speakerName;
+
         WaitForSeconds delay = new WaitForSeconds(delayForWrite);
         
         isTyping = true;
@@ -60,7 +65,7 @@ public class PrintingText : MonoBehaviour
             if (coroutineForTextAnimation != null)
             {
                 StopCoroutine(coroutineForTextAnimation);
-                textMesh.text = textsToDisplay.texts[indexOfText];
+                textMesh.text = textsToDisplay.phrases[indexOfText].text;
                 isTyping = false;
             }
             else
@@ -72,7 +77,7 @@ public class PrintingText : MonoBehaviour
         {
             // Display next text (if exists)
             indexOfText++;
-            if (indexOfText < textsToDisplay.texts.Count)
+            if (indexOfText < textsToDisplay.phrases.Count)
             {
                 PrintText();
             }

@@ -179,6 +179,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DragableBlockCollider (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7431073307053372053, guid: e2035186038a36147a3422ef60af3f88, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9006343420495964559, guid: e2035186038a36147a3422ef60af3f88, type: 3}
       propertyPath: m_SortingOrder
       value: 70
