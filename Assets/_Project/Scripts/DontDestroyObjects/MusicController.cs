@@ -1,11 +1,11 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 
 public class MusicController : MonoBehaviour
 {
+    public static MusicController Instance { get; private set;}
+
     [Header("Params")]
     [SerializeField] private byte _currentAudioSource = 1;
     [SerializeField] private float _changeVolumeMultiplier = 1;
@@ -13,13 +13,22 @@ public class MusicController : MonoBehaviour
     [Header("References")]
     [SerializeField] private AudioSource _myAudioSource1;
     [SerializeField] private AudioSource _myAudioSource2;
-    [SerializeField] private AudioClip _trackTest;
     [SerializeField] private AudioClip _trackMainMenu;
     [SerializeField] private AudioClip _trackLevel1_Swamp;
     [SerializeField] private AudioClip _trackLevel2_Forest;
 
     private void Awake()
     {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+            return;
+        }
+
         _currentAudioSource = 1;
         SmoothChangeTrack(SceneNames.MainMenu, true).Forget();
 
@@ -41,60 +50,42 @@ public class MusicController : MonoBehaviour
 
     private async UniTask SmoothChangeTrack(SceneNames sceneName, bool turnOn)
     {
+        AudioSource activeAudioSource = _currentAudioSource == 1 ? _myAudioSource1 : _myAudioSource2;
+        AudioSource inactiveAudioSource = _currentAudioSource == 1 ? _myAudioSource2 : _myAudioSource1;
+
         if (turnOn)
         {
-            AudioClip trackToPlay;
+            // Останавливаем текущий трек на активном AudioSource, если он играет
+            await SmoothTurnOffAudioSource(activeAudioSource);
 
-            switch (sceneName)
+            AudioClip trackToPlay = GetAudioClipForScene(sceneName);
+            if (trackToPlay == null)
             {
-                case SceneNames.MainMenu:
-                    trackToPlay = _trackMainMenu;
-                    break;
-                case SceneNames.Level1_Swamp:
-                    trackToPlay = _trackLevel1_Swamp;
-                    break;
-                case SceneNames.Level2_Forest:
-                    trackToPlay = _trackLevel2_Forest;
-                    break;
-                default:
-                    trackToPlay = _trackMainMenu;
-                    break;
+                Debug.LogError($"MusicController: SmoothChangeTrack: No track assigned for scene {sceneName}");
+                return;
             }
 
             Debug.Log($"MusicController: SmoothChangeTrack: sceneName={sceneName} trackToPlay={trackToPlay}");
+            await SmoothTurnOnAudioSource(inactiveAudioSource, trackToPlay);
 
-            if (_currentAudioSource == 1)
-            {
-                _currentAudioSource = 2;
-                await SmoothTurnOnAudioSource(_myAudioSource2, trackToPlay);
-            }
-            else if (_currentAudioSource == 2)
-            {
-                _currentAudioSource = 1;
-                await SmoothTurnOnAudioSource(_myAudioSource1, trackToPlay);
-            }
-            else
-            {
-                Debug.LogError($"MusicController: SmoothChangeTrack: unexpected _currentAudioSource={_currentAudioSource}");
-                return;
-            }
+            // Переключаем текущий AudioSource
+            _currentAudioSource = _currentAudioSource == 1 ? (byte)2 : (byte)1;
         }
         else
         {
-            if (_currentAudioSource == 1)
-            {
-                await SmoothTurnOffAudioSource(_myAudioSource1);
-            }
-            else if (_currentAudioSource == 2)
-            {
-                await SmoothTurnOffAudioSource(_myAudioSource2);
-            }
-            else
-            {
-                Debug.LogError($"MusicController: SmoothChangeTrack: unexpected _currentAudioSource={_currentAudioSource}");
-                return;
-            }
+            await SmoothTurnOffAudioSource(activeAudioSource);
         }
+    }
+
+    private AudioClip GetAudioClipForScene(SceneNames sceneName)
+    {
+        return sceneName switch
+        {
+            SceneNames.MainMenu => _trackMainMenu,
+            SceneNames.Level1_Swamp => _trackLevel1_Swamp,
+            SceneNames.Level2_Forest => _trackLevel2_Forest,
+            _ => _trackMainMenu,
+        };
     }
 
     private async UniTask SmoothTurnOnAudioSource(AudioSource audioSource, AudioClip audioClip)
@@ -106,7 +97,6 @@ public class MusicController : MonoBehaviour
         while (audioSource.volume < 1f)
         {
             audioSource.volume = Mathf.MoveTowards(audioSource.volume, 1f, Time.deltaTime * _changeVolumeMultiplier);
-            //Debug.Log($"MusicController: SmoothChangeTrack: audioSource.volume={audioSource.volume}");
             await UniTask.Yield();
         }
     }

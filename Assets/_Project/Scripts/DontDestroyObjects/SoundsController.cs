@@ -11,6 +11,7 @@ public class SoundsController : MonoBehaviour
 
     [Header("AudioClips")]
     [SerializeField] private AudioClip _clipBlip;
+    [SerializeField] private AudioClip _clipPositivieClick;
 
     [Header("Private fields")]
     [SerializeField] private int _currentAudioSource;
@@ -29,20 +30,6 @@ public class SoundsController : MonoBehaviour
         _currentAudioSource = 0;
     }
 
-    // private void Start()
-    // {
-    //     Test();
-    // }
-
-    // private async UniTask Test()
-    // {
-    //     for (int i = 0; i < 10; i++)
-    //     {
-    //         await UniTask.WaitForSeconds(0.5f);
-    //         PlayBlip();
-    //     }
-    // }
-
     private void PlayAudioClip(AudioClip audioClip)
     {
         _audioSources[_currentAudioSource].clip = audioClip;
@@ -58,5 +45,10 @@ public class SoundsController : MonoBehaviour
     public void PlayBlip()
     {
         PlayAudioClip(_clipBlip);
+    }
+
+    public void PlayPositiveClick()
+    {
+        PlayAudioClip(_clipPositivieClick);
     }
 }

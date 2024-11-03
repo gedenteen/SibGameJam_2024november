@@ -116,7 +116,7 @@ public class CanvasForGhost : MonoBehaviour
 
                 if (SoundsController.Instance != null)
                 {
-                    SoundsController.Instance.PlayBlip();
+                    SoundsController.Instance.PlayPositiveClick();
                 }
 
                 if (_keySequenceIndex == _keySequence.Length)

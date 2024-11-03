@@ -7,14 +7,22 @@ using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
-    [SerializeField] private SceneTransition _sceneTransition;
     [SerializeField] private Button buttonStart;
     [SerializeField] private Button buttonSettings;
     [SerializeField] private Button buttonQuit;
     [SerializeField] private TextMeshProUGUI textVersion;
 
+    private SceneTransition _sceneTransition;
+
     private void Awake()
     {
+        _sceneTransition = FindObjectOfType<SceneTransition>();
+        if (_sceneTransition == null)
+        {
+            Debug.LogError($"MainMenu: Awake: _sceneTransition is null");
+            return;
+        }
+
         buttonStart.onClick.AddListener(_sceneTransition.SwitchToNextScene);
         buttonSettings.onClick.AddListener(ShowSettings);
 

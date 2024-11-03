@@ -793,6 +793,7 @@ MonoBehaviour:
   - {fileID: 6901811126855319560}
   - {fileID: 5169480595420031312}
   _clipBlip: {fileID: 8300000, guid: 7f29a55b579f0d546a0cecc4f89fb0ea, type: 3}
+  _clipPositivieClick: {fileID: 8300000, guid: 9b1955d95813afd40afd3ac1fb4dc6e3, type: 3}
   _currentAudioSource: 0
 --- !u!1001 &4187940417196941586
 PrefabInstance:
