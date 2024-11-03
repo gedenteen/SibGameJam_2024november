@@ -9,7 +9,7 @@ public class SceneTransition : MonoBehaviour
 {
     public static SceneTransition instance { get; private set;}
 
-    private LoadingScreen loadingScreen;
+    [SerializeField] private LoadingScreen loadingScreen;
     [SerializeField] private float timeForActivateLoadingScreen = 0.5f;
     private AsyncOperation loadingSceneOperation;
 
@@ -26,8 +26,8 @@ public class SceneTransition : MonoBehaviour
             return;
         }
 
-        loadingScreen = FindObjectOfType<LoadingScreen>(); // можно прокинуть ссылку вручную,
-        // из-за этой херни ломается билд под WebgL, Я НЕ ЗНАЮ ПОЧЕМУ
+        // loadingScreen = FindObjectOfType<LoadingScreen>(); // можно прокинуть ссылку вручную,
+        // // из-за этой херни ломается билд под WebgL, Я НЕ ЗНАЮ ПОЧЕМУ
     }
 
     public async void SwitchToNextScene()
