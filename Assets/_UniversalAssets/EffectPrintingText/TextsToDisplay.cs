@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.Events;
 
 [CreateAssetMenu(fileName = "TextsToDisplay", menuName = "ScriptableObjects/Create TextsToDisplay")]
 public class TextsToDisplay : ScriptableObject
@@ -14,6 +15,8 @@ public class TextsToDisplay : ScriptableObject
     public Sprite spriteChar1;
     [SerializeField]
     public Sprite spriteChar2;
+    [SerializeField]
+    public bool LoadNextSceneInEnd = false;
 }
 
 [System.Serializable]

@@ -84,6 +84,10 @@ public class PrintingText : MonoBehaviour
             else
             {
                 eventDialogueIsOver?.Invoke();
+                if (textsToDisplay.LoadNextSceneInEnd)
+                {
+                    SceneTransition.instance.SwitchToNextScene();
+                }
             }
         }
     }
