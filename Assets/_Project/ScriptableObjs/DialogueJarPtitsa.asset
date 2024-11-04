@@ -45,6 +45,6 @@ MonoBehaviour:
       \u0412\u043E\u0442 \u0412\u0430\u043C \u043C\u043E\u0435 \u043F\u0435\u0440\u043E,
       \u0447\u0442\u043E\u0431\u044B \u0435\u0435 \u043E\u0442\u043A\u0440\u044B\u0442\u044C. "
   delayForWrite: 0.06
-  spriteChar1: {fileID: 21300000, guid: 724cd055f0efe0641bf0806576606b4a, type: 3}
-  spriteChar2: {fileID: 21300000, guid: ad964788aebaf4c41b04f497d1678800, type: 3}
+  spriteChar1: {fileID: 21300000, guid: 3d8eb06d1a65ec642a24ac94d38117e3, type: 3}
+  spriteChar2: {fileID: 21300000, guid: 3101940f9229eee4b86e7513d936eb1c, type: 3}
   LoadNextSceneInEnd: 0
