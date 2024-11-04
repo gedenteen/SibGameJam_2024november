@@ -6,6 +6,7 @@ using UnityEngine;
 public enum SceneNames
 {
     MainMenu = 0,
+    Intro,
     Level1_Swamp,
     Level2_Forest,
     Level4_Koshei,
