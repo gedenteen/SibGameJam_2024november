@@ -25,8 +25,26 @@ public class DialogueController : UiPanel
 
     public void ActivateAndSetDialogue(bool activate, TextsToDisplay textsToDisplay)
     {
-        _imageForCharLeft.sprite = textsToDisplay.spriteChar1;
-        _imageForCharRight.sprite = textsToDisplay.spriteChar2;
+        if (textsToDisplay.spriteChar1 != null)
+        {
+            _imageForCharLeft.gameObject.SetActive(true);
+            _imageForCharLeft.sprite = textsToDisplay.spriteChar1;
+        }
+        else
+        {
+            _imageForCharLeft.gameObject.SetActive(false);
+        }
+
+        if (textsToDisplay.spriteChar2 != null)
+        {
+            _imageForCharRight.gameObject.SetActive(true);
+            _imageForCharRight.sprite = textsToDisplay.spriteChar2;
+        }
+        else
+        {
+            _imageForCharRight.gameObject.SetActive(false);
+        }
+
         _printingText.textsToDisplay = textsToDisplay;
         Activate(activate, _delayForActivate);
     }
