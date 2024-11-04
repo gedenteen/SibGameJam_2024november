@@ -1903,6 +1903,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7047456904346130264, guid: 58764023afe57994b8ad52b2ce20d911, type: 3}
+      propertyPath: _textToDisplay
+      value: 
+      objectReference: {fileID: 11400000, guid: c362aedeabbdf924c949ba480f8d573d, type: 2}
     - target: {fileID: 7460679748042133039, guid: 58764023afe57994b8ad52b2ce20d911, type: 3}
       propertyPath: m_Name
       value: DialogueTriggerWaterguy
