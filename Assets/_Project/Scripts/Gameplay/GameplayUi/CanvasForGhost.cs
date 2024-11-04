@@ -76,6 +76,11 @@ public class CanvasForGhost : MonoBehaviour
             _imagesOfKey[i].gameObject.SetActive(true);
         }
 
+        if (SoundsController.Instance != null)
+        {
+            SoundsController.Instance.PlayTimer();
+        }
+
         _keySequence = keySequence;
         _keySequenceIndex = 0;
         _isMinigameInput = true;
@@ -126,6 +131,8 @@ public class CanvasForGhost : MonoBehaviour
             }
             else
             {
+                if (SoundsController.Instance != null)
+                    SoundsController.Instance.PlayNegativeClick();
                 StopMinigameInput();
                 return;
             }

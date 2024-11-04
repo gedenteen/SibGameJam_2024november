@@ -12,6 +12,8 @@ public class SoundsController : MonoBehaviour
     [Header("AudioClips")]
     [SerializeField] private AudioClip _clipBlip;
     [SerializeField] private AudioClip _clipPositivieClick;
+    [SerializeField] private AudioClip _clipNegativeClick;
+    [SerializeField] private AudioClip _clipTimer;
 
     [Header("Private fields")]
     [SerializeField] private int _currentAudioSource;
@@ -47,8 +49,18 @@ public class SoundsController : MonoBehaviour
         PlayAudioClip(_clipBlip);
     }
 
+    public void PlayTimer()
+    {
+        PlayAudioClip(_clipTimer);
+    }
+
     public void PlayPositiveClick()
     {
         PlayAudioClip(_clipPositivieClick);
+    }
+
+    public void PlayNegativeClick()
+    {
+        PlayAudioClip(_clipNegativeClick);
     }
 }
