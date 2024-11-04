@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/_Project/Scenes/Level4_Koshei.unity
     guid: 3d2cb3bf3587bae439a5e6e957d9362c
   - enabled: 1
+    path: Assets/_Project/Scenes/Level5_Zmei.unity
+    guid: 5e32fa814995b254395d13e6bb78752d
+  - enabled: 1
     path: Assets/_Project/Scenes/Boot.unity
     guid: 89bf6022fe7c6be49b8d108b2ec3bcb4
   m_configObjects: {}
