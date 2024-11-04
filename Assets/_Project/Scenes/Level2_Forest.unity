@@ -1899,6 +1899,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: 43924aa1ff9e346479b0d729b55cea5a, type: 2}
     - target: {fileID: 3020793214361677261, guid: 0b487c58c9f80374096d47fe034816e6, type: 3}
+      propertyPath: _eventsForInvoke.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3020793214361677261, guid: 0b487c58c9f80374096d47fe034816e6, type: 3}
       propertyPath: _methodForInvoke.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -1911,6 +1915,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2037509304}
     - target: {fileID: 3020793214361677261, guid: 0b487c58c9f80374096d47fe034816e6, type: 3}
+      propertyPath: _eventsForInvoke.Array.data[0].m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3020793214361677261, guid: 0b487c58c9f80374096d47fe034816e6, type: 3}
       propertyPath: _methodForInvoke.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
@@ -1919,11 +1927,35 @@ PrefabInstance:
       value: Die
       objectReference: {fileID: 0}
     - target: {fileID: 3020793214361677261, guid: 0b487c58c9f80374096d47fe034816e6, type: 3}
+      propertyPath: _eventsForInvoke.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3020793214361677261, guid: 0b487c58c9f80374096d47fe034816e6, type: 3}
+      propertyPath: _eventsForInvoke.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2037509304}
+    - target: {fileID: 3020793214361677261, guid: 0b487c58c9f80374096d47fe034816e6, type: 3}
       propertyPath: _methodForInvoke.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: IvanController, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3020793214361677261, guid: 0b487c58c9f80374096d47fe034816e6, type: 3}
+      propertyPath: _eventsForInvoke.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3020793214361677261, guid: 0b487c58c9f80374096d47fe034816e6, type: 3}
+      propertyPath: _eventsForInvoke.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Die
+      objectReference: {fileID: 0}
+    - target: {fileID: 3020793214361677261, guid: 0b487c58c9f80374096d47fe034816e6, type: 3}
+      propertyPath: _eventsForInvoke.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: IvanController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3020793214361677261, guid: 0b487c58c9f80374096d47fe034816e6, type: 3}
       propertyPath: _methodForInvoke.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3020793214361677261, guid: 0b487c58c9f80374096d47fe034816e6, type: 3}
+      propertyPath: _eventsForInvoke.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4479973442135120954, guid: 0b487c58c9f80374096d47fe034816e6, type: 3}
@@ -3201,7 +3233,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8634242978229244610, guid: d8e4e48d0245a6b408dbefadbe7b3030, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 12.05
+      value: 13.93
       objectReference: {fileID: 0}
     - target: {fileID: 8634242978229244610, guid: d8e4e48d0245a6b408dbefadbe7b3030, type: 3}
       propertyPath: m_LocalPosition.y
