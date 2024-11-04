@@ -21,6 +21,6 @@ public class Phrase
 {
     [SerializeField]
     public string nameOfSpeaker;
-    [SerializeField] [TextArea]
+    [SerializeField] [TextArea(5, 5)]
     public string text;
 }

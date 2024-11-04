@@ -11,5 +11,6 @@ public enum SceneNames
     Level2_Forest,
     Level4_Koshei,
     Level5_Zmei,
+    Final,
     Boot
 }
