@@ -1750,6 +1750,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: da0c30b1a596f184e9646c4298b95148, type: 3}
+--- !u!114 &1600637865727674326 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 967527549418391112, guid: da0c30b1a596f184e9646c4298b95148, type: 3}
+  m_PrefabInstance: {fileID: 1600637865727674325}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31e93a2c3b976b64cb99037f178a7cf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2720289167094406628
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1806,6 +1817,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7612324019559941276, guid: 9fc5f5d919e0b624fa01101f4bcad769, type: 3}
+      propertyPath: _canvasForGhost
+      value: 
+      objectReference: {fileID: 1600637865727674326}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
