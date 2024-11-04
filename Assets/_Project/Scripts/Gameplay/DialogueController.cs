@@ -47,6 +47,7 @@ public class DialogueController : UiPanel
 
         _printingText.textsToDisplay = textsToDisplay;
         Activate(activate, _delayForActivate);
+        //_printingText.StartAAAAAA();
     }
 
     private void OnDialogueOver()

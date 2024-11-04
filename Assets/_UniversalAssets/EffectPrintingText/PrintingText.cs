@@ -25,13 +25,21 @@ public class PrintingText : MonoBehaviour
         button.onClick.AddListener(OnButtonClick);
     }
 
-    private void Start()
+    private void OnEnable()
     {
+        StartDialogueAndResetIndex();
+    }
+
+    public void StartDialogueAndResetIndex()
+    {
+        indexOfText = 0;
         PrintText();
     }
 
     public void PrintText()
     {
+        //Debug.Log($"PrintingText: PrintText: textsToDisplay={textsToDisplay}");
+
         textMesh.text = "";
         coroutineForTextAnimation = CoroutinePrint(
             textsToDisplay.phrases[indexOfText].nameOfSpeaker,
