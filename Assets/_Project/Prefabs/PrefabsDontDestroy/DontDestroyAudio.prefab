@@ -434,10 +434,10 @@ MonoBehaviour:
   _changeVolumeMultiplier: 1
   _myAudioSource1: {fileID: 7082948581698040301}
   _myAudioSource2: {fileID: 3121677276768909183}
-  _trackTest: {fileID: 8300000, guid: a075223dc46f3f947bc8ccce9f79213f, type: 3}
   _trackMainMenu: {fileID: 8300000, guid: e8620e57eaa9ba04296c4ea3fefa4197, type: 3}
   _trackLevel1_Swamp: {fileID: 8300000, guid: c4a5ae71aab3336409f10c56ca3d3774, type: 3}
   _trackLevel2_Forest: {fileID: 8300000, guid: b8bb0fc928a678349b5a0dd51381f9db, type: 3}
+  _trackLevel4_Koshei: {fileID: 8300000, guid: 2c17944399e49d149af01049c571cd22, type: 3}
 --- !u!1 &5316369041110944693
 GameObject:
   m_ObjectHideFlags: 0

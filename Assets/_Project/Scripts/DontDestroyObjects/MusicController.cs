@@ -16,6 +16,7 @@ public class MusicController : MonoBehaviour
     [SerializeField] private AudioClip _trackMainMenu;
     [SerializeField] private AudioClip _trackLevel1_Swamp;
     [SerializeField] private AudioClip _trackLevel2_Forest;
+    [SerializeField] private AudioClip _trackLevel4_Koshei;
 
     private void Awake()
     {
@@ -84,6 +85,7 @@ public class MusicController : MonoBehaviour
             SceneNames.MainMenu => _trackMainMenu,
             SceneNames.Level1_Swamp => _trackLevel1_Swamp,
             SceneNames.Level2_Forest => _trackLevel2_Forest,
+            SceneNames.Level4_Koshei => _trackLevel4_Koshei,
             _ => _trackMainMenu,
         };
     }
