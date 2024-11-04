@@ -513,11 +513,11 @@ PrefabInstance:
       objectReference: {fileID: 1522631343}
     - target: {fileID: 5993249140322508616, guid: 36d71854ae73ace4aa30a3232931cf6f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.0006021261
+      value: -0.00060749054
       objectReference: {fileID: 0}
     - target: {fileID: 5993249140322508616, guid: 36d71854ae73ace4aa30a3232931cf6f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.40929
+      value: -0.40928
       objectReference: {fileID: 0}
     - target: {fileID: 8217555993274597130, guid: 36d71854ae73ace4aa30a3232931cf6f, type: 3}
       propertyPath: m_BoundingShape2D
@@ -3191,13 +3191,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5380101423656096890, guid: d8e4e48d0245a6b408dbefadbe7b3030, type: 3}
+      propertyPath: _textToDisplay
+      value: 
+      objectReference: {fileID: 11400000, guid: 5c652c579d43b7549b713df2f8e0d8ec, type: 2}
     - target: {fileID: 5543304117288701197, guid: d8e4e48d0245a6b408dbefadbe7b3030, type: 3}
       propertyPath: m_Name
       value: DialogueTriggerBear
       objectReference: {fileID: 0}
     - target: {fileID: 8634242978229244610, guid: d8e4e48d0245a6b408dbefadbe7b3030, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.183
+      value: 12.05
       objectReference: {fileID: 0}
     - target: {fileID: 8634242978229244610, guid: d8e4e48d0245a6b408dbefadbe7b3030, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3209,11 +3213,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8634242978229244610, guid: d8e4e48d0245a6b408dbefadbe7b3030, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.999993
       objectReference: {fileID: 0}
     - target: {fileID: 8634242978229244610, guid: d8e4e48d0245a6b408dbefadbe7b3030, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0.003734669
       objectReference: {fileID: 0}
     - target: {fileID: 8634242978229244610, guid: d8e4e48d0245a6b408dbefadbe7b3030, type: 3}
       propertyPath: m_LocalRotation.y
@@ -3225,7 +3229,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8634242978229244610, guid: d8e4e48d0245a6b408dbefadbe7b3030, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: 0.428
       objectReference: {fileID: 0}
     - target: {fileID: 8634242978229244610, guid: d8e4e48d0245a6b408dbefadbe7b3030, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
