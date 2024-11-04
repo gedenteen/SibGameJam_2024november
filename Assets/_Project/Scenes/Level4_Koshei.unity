@@ -4051,6 +4051,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8081307011029655271, guid: fc1b90fb233507a4ba21a8ead07dd35f, type: 3}
+      propertyPath: _textToDisplay
+      value: 
+      objectReference: {fileID: 11400000, guid: 26da0a7634bd8214baf35adcc0c13b87, type: 2}
+    - target: {fileID: 8081307011029655271, guid: fc1b90fb233507a4ba21a8ead07dd35f, type: 3}
       propertyPath: _hideSpriteInGame
       value: 0
       objectReference: {fileID: 0}
